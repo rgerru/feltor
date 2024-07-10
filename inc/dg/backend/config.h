@@ -61,7 +61,7 @@
 #ifdef MPI_VERSION
 #if THRUST_DEVICE_SYSTEM==THRUST_DEVICE_SYSTEM_CUDA
 
-#include "mpi-ext.h"
+//#include "mpi-ext.h"
 #if defined(MPIX_CUDA_AWARE_SUPPORT) && MPIX_CUDA_AWARE_SUPPORT
 #pragma message( "CUDA-aware MPI support detected! Yay!")
 //Has cuda aware MPI support. Everything fine
@@ -70,8 +70,9 @@
 #define _DG_CUDA_UNAWARE_MPI
 #else
 #pragma message( "Cannot determine CUDA-aware MPI support! Falling back to regular MPI!")
-#define _DG_CUDA_UNAWARE_MPI
+//#define _DG_CUDA_UNAWARE_MPI
 #endif //MPIX_CUDA
 
 #endif //THRUST == CUDA
+
 #endif //MPI_VERSION
